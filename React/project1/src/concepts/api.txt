@@ -1,0 +1,4 @@
+What is an API?
+API - Application programming interface
+* Builds a communication channel between the frontend and the backend
+* Restful apis use - http methods such as get,post,put,delete
