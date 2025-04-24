@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        height: 5rem;
+      }
+      table,
+      tr,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- render an array of objects as a table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Occupation</th>
+          <th>Profile Picture</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <script>
+      let people = [
+        {
+          name: "Anil",
+          age: 24,
+          occupation: "SDE",
+          profilepic:
+            "https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+        {
+          name: "Amith",
+          age: 23,
+          occupation: "SDE",
+          profilepic:
+            "https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+        {
+          name: "John",
+          age: 33,
+          occupation: "Manager",
+          profilepic:
+            "https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+        {
+          name: "Dev",
+          age: 25,
+          occupation: "Doctor",
+          profilepic:
+            "https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+        {
+          name: "Ash",
+          age: 23,
+          occupation: "Engg",
+          profilepic:
+            "https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+      ];
+      let tbody = document.getElementById("tbody");
+
+      people.map((person) => {
+        //    create row
+        let tr = document.createElement("tr");
+        let nameCell = document.createElement("td");
+        let ageCell = document.createElement("td");
+        let occupationCell = document.createElement("td");
+        let picCell = document.createElement("td");
+        let img = document.createElement("img");
+        nameCell.innerHTML = person.name;
+        ageCell.innerHTML = person.age;
+        occupationCell.innerHTML = person.occupation;
+        img.src = person.profilepic;
+        picCell.appendChild(img);
+        tr.appendChild(nameCell);
+        tr.appendChild(ageCell);
+        tr.appendChild(occupationCell);
+        tr.appendChild(picCell);
+        tbody.appendChild(tr);
+      });
+    </script>
+  </body>
+</html>

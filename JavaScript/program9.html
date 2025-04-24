@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- JSON -->
+    <script>
+      let data = '{"name": "Anil", "age": 24, "occupation": "SDE"}';
+      console.log(data);
+
+      //   convert json data to js object
+      let obj = JSON.parse(data);
+      console.log(obj);
+
+      let person = {
+        name: "Amith",
+        age: 24,
+        occupation: "SDE",
+      };
+      //   convert js object to json string
+      let jsonStr = JSON.stringify(person);
+      console.log(jsonStr);
+    </script>
+  </body>
+</html>

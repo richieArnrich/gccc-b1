@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- find whether a number is a perfect number or not -->
+    <script>
+      let num = 14;
+      let sum = 0;
+      let prevSum = 0;
+      for (let i = 1; i <= num; i++) {
+        if (num % i == 0) {
+          prevSum = sum;
+          sum = sum + i;
+          document.write(`${prevSum}+ ${i} = ${sum}<br>`);
+        }
+      }
+      if (sum == 2 * num) {
+        document.write("It is a perfect number" + "<br>");
+      } else {
+        document.write("It is not a perfect number" + "<br>");
+      }
+    </script>
+  </body>
+</html>
